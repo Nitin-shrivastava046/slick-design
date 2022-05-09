@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick carousel</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="slick.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">our popular brand</h1>
+        <div class="logo-slider">
+            <div class="item"><a href="/images/a1.jpg" data-fancybox="gallery" data-caption="Optional caption"><img src="/images/a1.jpg" alt=""></a></div>
+            <div class="item"><a href="/images/a1.jpg" data-fancybox="gallery" data-caption="Optional caption"><img src="/images/a1.jpg" alt=""></a></div>
+            <div class="item"><a href="/images/f1.jpg" data-fancybox="gallery" data-caption="Optional caption"><img src="/images/f1.jpg" alt=""></a></div>
+            <div class="item"><a href="/images/f2.jpeg" data-fancybox="gallery" data-caption="Optional caption"><img src="/images/f2.jpeg" alt=""></a></div>
+            <div class="item"><a href="/images/f2.jpeg" data-fancybox="gallery" data-caption="Optional caption"><img src="/images/f2.jpeg" alt=""></a></div>
+            <div class="item"><a href="/images/f1.jpg" data-fancybox="gallery" data-caption="Optional caption"><img src="/images/f1.jpg" alt=""></a></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+
+        $('.logo-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots:true,
+            autoplay:true
+        });
+
+        Fancybox.bind("[data-fancybox]", {
+            Thumbs: false,
+            Toolbar: false,
+
+            Image: {
+                zoom: true,
+                click: false,
+                wheel: "slide",
+            },
+        });
+    </script>
+</body>
+
+</html>
